@@ -56,7 +56,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .center { text-align: center; margin-left: auto; margin-right: auto; }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 14px 28px;
   border-radius: 8px;
   font-family: var(--font-display);
@@ -65,6 +67,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
   border: 1px solid transparent;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .btn-primary {
