@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PlexRAG — RAG &amp; AI project by Francisco Martínez</title>
+<meta name="description" content="PlexRAG — a personal RAG-powered AI assistant over a Plex media library. Angular 22 frontend, .NET 10 API, Docker, Google OAuth, and multi-cloud AI on Azure OpenAI and Google Cloud." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <nav class="nav container">
+    <a href="index.html#top" class="logo">fjmp<span class="accent">76</span></a>
+    <div class="nav-right">
+      <div class="lang-switch" id="langSwitch" role="group" aria-label="Language selector">
+        <button type="button" class="lang-btn" data-lang="es">ES</button>
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#top" data-i18n="nav.home">Inicio</a></li>
+      <li><a href="index.html#about" data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="index.html#stack" data-i18n="nav.stack">Stack</a></li>
+      <li><a href="index.html#projects" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="index.html#clients" data-i18n="nav.clients">Clientes</a></li>
+      <li><a href="index.html#contact" data-i18n="nav.contact">Contacto</a></li>
+      <li><a href="https://blog.fjmp76.com" target="_blank" rel="noopener" class="nav-blog">Blog ↗</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section class="phero reveal">
+    <div class="container">
+      <a href="index.html#projects" class="back-crumb" data-i18n="plexrag.back">← Volver al portafolio</a>
+      <div class="phero-grid" style="margin-top:24px;">
+        <div class="phero-text">
+          <p class="eyebrow" data-i18n="plexrag.eyebrow">// proyecto destacado</p>
+          <h1>PlexRAG</h1>
+          <p data-i18n="plexrag.tagline">Un asistente conversacional de IA, con RAG, que responde preguntas sobre tu propia biblioteca de Plex — con modo estándar y modo Agent, autenticación con Google e indexado vectorial administrable.</p>
+          <div class="phero-actions">
+            <a href="https://plexrag.fjmp76.com" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plexrag.cta.live">Ver la app en vivo ↗</a>
+            <a href="index.html#projects" class="btn btn-ghost" data-i18n="plexrag.cta.back">← Volver al portafolio</a>
+          </div>
+        </div>
+        <div class="phero-visual">
+          <svg viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plex, RAG and AI illustration">
+            <defs>
+              <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#00e5ff"/>
+                <stop offset="1" stop-color="#7c3aed"/>
+              </linearGradient>
+            </defs>
+            <g stroke="url(#pg1)" stroke-width="2" stroke-dasharray="6 6" opacity="0.55" fill="none">
+              <line x1="200" y1="170" x2="90" y2="80"/>
+              <line x1="200" y1="170" x2="310" y2="80"/>
+              <line x1="200" y1="170" x2="200" y2="280"/>
+            </g>
+
+            <circle cx="200" cy="170" r="46" fill="#0d1320" stroke="url(#pg1)" stroke-width="2"/>
+            <line x1="184" y1="162" x2="212" y2="156" stroke="#8b96ab" stroke-width="1"/>
+            <line x1="184" y1="162" x2="200" y2="184" stroke="#8b96ab" stroke-width="1"/>
+            <line x1="212" y1="156" x2="220" y2="182" stroke="#8b96ab" stroke-width="1"/>
+            <circle cx="184" cy="162" r="5" fill="#00e5ff"/>
+            <circle cx="212" cy="156" r="5" fill="#7c3aed"/>
+            <circle cx="200" cy="184" r="5" fill="#ff2fb1"/>
+            <circle cx="220" cy="182" r="4" fill="#00e5ff"/>
+
+            <circle cx="90" cy="80" r="44" fill="url(#pg1)"/>
+            <path d="M77 59 L110 80 L77 101 Z" fill="#05060a"/>
+
+            <circle cx="310" cy="80" r="44" fill="#0d1320" stroke="url(#pg1)" stroke-width="2"/>
+            <path d="M292 66 h36 a8 8 0 0 1 8 8 v12 a8 8 0 0 1 -8 8 h-18 l-11 10 v-10 h-7 a8 8 0 0 1 -8 -8 v-12 a8 8 0 0 1 8 -8 z" fill="none" stroke="#e6ebf5" stroke-width="2"/>
+            <path d="M310 71 l3.2 6.4 6.4 3.2 -6.4 3.2 -3.2 6.4 -3.2 -6.4 -6.4 -3.2 6.4 -3.2z" fill="#00e5ff"/>
+
+            <circle cx="200" cy="280" r="44" fill="#0d1320" stroke="url(#pg1)" stroke-width="2"/>
+            <rect x="180" y="261" width="24" height="32" rx="3" fill="#0d1320" stroke="#7c3aed" stroke-width="1.6"/>
+            <rect x="192" y="269" width="26" height="32" rx="3" fill="#0d1320" stroke="#00e5ff" stroke-width="2"/>
+            <line x1="198" y1="279" x2="212" y2="279" stroke="#00e5ff" stroke-width="1.5"/>
+            <line x1="198" y1="287" x2="212" y2="287" stroke="#00e5ff" stroke-width="1.5"/>
+            <line x1="198" y1="295" x2="207" y2="295" stroke="#00e5ff" stroke-width="1.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overview reveal">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="plexrag.overview.eyebrow">// qué construí</p>
+      <h2 class="center" data-i18n="plexrag.overview.title">Un asistente RAG personal sobre tu propia biblioteca de Plex</h2>
+      <div class="lead center">
+        <p data-i18n-html="plexrag.overview.p1">PlexRAG es una aplicación personal full-stack que indexa el catálogo de una biblioteca de Plex (películas, series, metadatos) en una base vectorial y permite hacer preguntas en lenguaje natural sobre ese contenido. El chat tiene dos modos: <strong>LLM / Standard</strong>, para respuestas directas basadas en el contexto recuperado, y <strong>Agent</strong>, donde el modelo puede orquestar herramientas para resolver consultas más complejas.</p>
+        <p data-i18n-html="plexrag.overview.p2">Un panel de administración permite sincronizar las secciones de la biblioteca de Plex y forzar un <em>reindexado</em> completo, mientras que la gestión de usuarios aplica control de acceso basado en roles (Admin / User) sobre un login con Google OAuth 2.0.</p>
+      </div>
+
+      <div class="shot-frame">
+        <div class="shot-frame-bar">
+          <span></span><span></span><span></span>
+        </div>
+        <img src="img/plexragai.jpg" alt="PlexRAG chat interface screenshot" loading="lazy" />
+      </div>
+      <p class="shot-caption" data-i18n="plexrag.shot.caption">Interfaz de chat de PlexRAG en producción — modos LLM/Standard y Agent.</p>
+    </div>
+  </section>
+
+  <section class="stack reveal">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="plexrag.specs.eyebrow">// especificaciones</p>
+      <h2 class="center" data-i18n="plexrag.specs.title">Cómo está construido</h2>
+      <div class="stack-grid">
+        <article class="stack-card">
+          <div class="stack-icon">🧠</div>
+          <h3 data-i18n="plexrag.specs.s1.title">Pipeline RAG sobre Plex</h3>
+          <p data-i18n="plexrag.specs.s1.desc">Sincronización de las secciones de la biblioteca de Plex y reindexado vectorial completo bajo demanda desde el panel de administración.</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">🔐</div>
+          <h3 data-i18n="plexrag.specs.s2.title">Autenticación y roles</h3>
+          <p data-i18n="plexrag.specs.s2.desc">Login con Google OAuth 2.0 y control de acceso basado en roles (Admin / User) para las pantallas de administración.</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">🅰️</div>
+          <h3 data-i18n="plexrag.specs.s3.title">Frontend en Angular</h3>
+          <p data-i18n="plexrag.specs.s3.desc">SPA construida con Angular (v22) y servicios standalone que consumen la API vía HttpClient, con enrutamiento por secciones (chat, indexado, usuarios).</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">🖥️</div>
+          <h3 data-i18n="plexrag.specs.s4.title">API en .NET 10</h3>
+          <p data-i18n="plexrag.specs.s4.desc">Backend REST en ASP.NET Core Web API sobre .NET 10, desplegado en su propio subdominio, separado del frontend.</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">🐳</div>
+          <h3 data-i18n="plexrag.specs.s5.title">Contenedores Docker</h3>
+          <p data-i18n="plexrag.specs.s5.desc">Frontend y backend empaquetados y desplegados como contenedores Docker independientes.</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">☁️</div>
+          <h3 data-i18n="plexrag.specs.s6.title">IA multi-cloud</h3>
+          <p data-i18n="plexrag.specs.s6.desc">Modelos de lenguaje servidos desde Azure OpenAI y Google Cloud (Vertex AI / Gemini) para alimentar los modos LLM y Agent.</p>
+        </article>
+        <article class="stack-card">
+          <div class="stack-icon">🔀</div>
+          <h3 data-i18n-html="plexrag.specs.s7.title">Git &amp; GitHub</h3>
+          <p data-i18n-html="plexrag.specs.s7.desc">Control de versiones con Git y repositorio en GitHub como base del flujo de desarrollo y despliegue.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects reveal">
+    <div class="container">
+      <p class="eyebrow center" data-i18n="plexrag.tech.eyebrow">// stack tecnológico</p>
+      <h2 class="center" data-i18n-html="plexrag.tech.title">Tecnologías y servicios usados</h2>
+      <div class="tech-grid">
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><path fill="#DD0031" d="M12 1.5 2.5 5v13L12 22.5 21.5 18V5L12 1.5z"/><path fill="#fff" d="M12 4.5 5.4 17h2.6l1.3-3.2h5.4L16 17h2.6L12 4.5zm0 3.9 2 4.8h-4l2-4.8z"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.angular.name">Angular</h3>
+          <p data-i18n="plexrag.tech.angular.desc">Frontend SPA y servicios</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#512BD4"/><text x="12" y="15.5" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">.NET</text></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.dotnet.name">.NET 10</h3>
+          <p data-i18n="plexrag.tech.dotnet.desc">API backend (ASP.NET Core)</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><g fill="#2496ED">
+              <rect x="1.8" y="11" width="3.2" height="3"/>
+              <rect x="5.6" y="11" width="3.2" height="3"/>
+              <rect x="9.4" y="11" width="3.2" height="3"/>
+              <rect x="5.6" y="7.3" width="3.2" height="3"/>
+              <rect x="9.4" y="7.3" width="3.2" height="3"/>
+              <rect x="9.4" y="3.6" width="3.2" height="3"/>
+              <path d="M22.6 12.2c-.5-.4-1.6-.5-2.4-.3-.1-.9-.6-1.6-1.4-2.3l-.3-.2-.2.3c-.4.5-.6 1.3-.5 2 .1.5.3 1 .7 1.3-.3.2-.9.4-1.7.4H1v.2c-.1 1 .1 3.7 1.9 5.7 1.4 1.5 3.5 2.3 6.2 2.3 5.9 0 10.3-2.7 12.3-7.6 1.6.1 3.1-.2 3.9-1.6l.2-.4-.5-.4z"/>
+            </g></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.docker.name">Docker</h3>
+          <p data-i18n="plexrag.tech.docker.desc">Empaquetado y despliegue</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><path fill="#0078D4" d="M9.4 3.2h4.9L9.2 16.9l8-1.6L11.6 21H3.1z"/><path fill="#0078D4" opacity=".75" d="M14.3 3.2 21 20.4a.8.8 0 0 1-.8 1.1H10c1-.1 1.8-.7 2.2-1.6l1-2.7-3.9-4 3.7-1z"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.azure.name">Azure</h3>
+          <p data-i18n="plexrag.tech.azure.desc">Azure OpenAI — modelos de IA</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M15.6 8.6a5.1 5.1 0 0 0-9.8 1.9A4.1 4.1 0 0 0 6.1 18h9.7a4.3 4.3 0 0 0 .8-8.6 3 3 0 0 0-1-.8z"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.gcp.name">Google Cloud</h3>
+          <p data-i18n="plexrag.tech.gcp.desc">Vertex AI / Gemini — modelos de IA</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.4-6.4C35.9 2.8 30.5 0 24 0 14.6 0 6.4 5.4 2.5 13.2l7.5 5.8C11.9 13.6 17.4 9.5 24 9.5z"/><path fill="#4285F4" d="M46.5 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.7c-.6 3-2.3 5.5-4.9 7.2l7.5 5.8c4.4-4 6.9-10 6.9-17.5z"/><path fill="#FBBC05" d="M10 28.9A14.5 14.5 0 0 1 9.5 24c0-1.7.3-3.4.8-4.9l-7.5-5.8A24 24 0 0 0 0 24c0 3.9.9 7.5 2.5 10.7z"/><path fill="#34A853" d="M24 48c6.5 0 12-2.1 16-5.8l-7.5-5.8c-2.1 1.5-4.9 2.4-8.5 2.4-6.6 0-12.1-4.1-14-9.9l-7.5 5.8C6.4 42.6 14.6 48 24 48z"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.oauth.name">Google OAuth 2.0</h3>
+          <p data-i18n="plexrag.tech.oauth.desc">Autenticación de usuarios</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><g fill="none" stroke="#00e5ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="12" height="15" rx="1.5"/>
+              <line x1="6" y1="8" x2="12" y2="8"/>
+              <line x1="6" y1="11.5" x2="12" y2="11.5"/>
+              <circle cx="17" cy="16" r="4"/>
+              <line x1="20" y1="19" x2="22.3" y2="21.3"/>
+            </g></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.rag.name">RAG</h3>
+          <p data-i18n="plexrag.tech.rag.desc">Búsqueda vectorial y recuperación de contexto</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24"><path fill="#F05033" d="M23.5 10.9 13.1.5a1.6 1.6 0 0 0-2.3 0L8.7 2.6l2.7 2.7a1.9 1.9 0 0 1 2.4 2.4l2.6 2.6a1.9 1.9 0 1 1-1.1 1.1L12.8 9v6.3a1.9 1.9 0 1 1-1.6 0V8.9a1.9 1.9 0 0 1-1-2.5L7.5 3.7.5 10.7a1.6 1.6 0 0 0 0 2.3l10.4 10.4a1.6 1.6 0 0 0 2.3 0l10.3-10.3a1.6 1.6 0 0 0 0-2.2z"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.git.name">Git</h3>
+          <p data-i18n="plexrag.tech.git.desc">Control de versiones</p>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-logo">
+            <svg viewBox="0 0 24 24" fill="#e6ebf5"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </div>
+          <h3 data-i18n="plexrag.tech.github.name">GitHub</h3>
+          <p data-i18n="plexrag.tech.github.desc">Repositorio y flujo de despliegue</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact reveal">
+    <div class="container contact-content">
+      <p class="eyebrow center" data-i18n="plexrag.eyebrow">// proyecto destacado</p>
+      <h2 class="center" data-i18n="plexrag.final.title">¿Quieres algo similar para tu producto?</h2>
+      <p class="center contact-sub" data-i18n="plexrag.final.sub">Construyo desde el diseño de arquitectura hasta el despliegue en producción.</p>
+      <div class="contact-links">
+        <a href="https://plexrag.fjmp76.com" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="plexrag.cta.live">Ver la app en vivo ↗</a>
+        <a href="index.html#contact" class="btn btn-ghost" data-i18n="contact.title">Construyamos algo juntos</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-content">
+    <span>fjmp<span class="accent">76</span>.com</span>
+    <span>© <span id="year"></span> <span data-i18n="footer.rights">Todos los derechos reservados</span></span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
